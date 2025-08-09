@@ -1,0 +1,19 @@
+Edit cnull/cli.py and add this subcommand:
+
+    adapt = sub.add_parser("adapt", help="Adapt experiment logs -> TE verdict")
+    adapt.add_argument("--glob", type=str, required=True, help="Glob for experiment_*.json")
+    adapt.add_argument("--out", type=str, default="real_eval")
+    adapt.add_argument("--lags", type=int, default=3)
+    adapt.add_argument("--surrogates", type=int, default=40)
+    adapt.add_argument("--null_block", type=int, default=25)
+    adapt.add_argument("--seed", type=int, default=42)
+
+Inside the dispatcher:
+
+    elif args.cmd == "adapt":
+        from .adapter_experiment import run_adapter
+        res = run_adapter(args.glob, outdir=args.out, lags=args.lags, surrogates=args.surrogates, null_block=args.null_block, seed=args.seed)
+        print("Adapter verdict:", res)
+
+Usage:
+    cnull adapt --glob "experiment_*.json" --out real_eval
