@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "CNull: Directionality Sanity Check for Emergent Communication"
+authors:
+  - family-names: "Czajkowski"
+    given-names: "Mariusz"
+version: "0.1.0"
+date-released: "2025-08-09"
+license: "Apache-2.0"
+repository-code: "https://github.com/yourname/cnull"

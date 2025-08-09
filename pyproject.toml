@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cnull"
+version = "0.1.0"
+description = "CNull: Directionality sanity check for emergent communication (ON/OFF interventions, ΔTE, surrogate nulls, watermark)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "Apache-2.0"}
+authors = [
+  {name = "Mariusz Czajkowski", email = "@"}
+]
+keywords = ["causality", "transfer entropy", "null models", "emergence", "alignment", "evaluation"]
+dependencies = [
+  "numpy>=1.22",
+  "pandas>=1.5",
+  "matplotlib>=3.6"
+]
+
+[project.scripts]
+cnull = "cnull.cli:main"
