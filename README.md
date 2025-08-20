@@ -57,8 +57,6 @@ Outputs:
 
 ## Positive control — expected shape
 
-Place the figures in `docs/` (or embed your own paths):
-
 <p align="center">
   <img src="docs/fig_dTE_vs_gamma.png" width="46%">
   <img src="docs/fig_dZblock_vs_gamma.png" width="46%">
